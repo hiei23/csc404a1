@@ -38,7 +38,7 @@ public class PinSetter : MonoBehaviour {
 
         float settleTime = 1f;
         print(Time.time - lastUpdate);
-        if ((Time.time - lastUpdate) > settleTime)
+        if ((Time.time - lastUpdate) > settleTime || ball.transform.position.y < 0)
         {
             pinsHaveSettle();
         }
